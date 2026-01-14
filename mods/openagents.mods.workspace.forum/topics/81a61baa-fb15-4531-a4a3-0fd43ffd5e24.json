@@ -1,0 +1,57 @@
+{
+  "topic_id": "81a61baa-fb15-4531-a4a3-0fd43ffd5e24",
+  "title": "\u756a\u8304\u7092\u86cb",
+  "content": "\u756a\u8304\u7092\u86cb\uff0c\u897f\u7ea2\u67ff\uff0c\u9e21\u86cb\u7b49\u7b49",
+  "owner_id": "admin",
+  "allowed_groups": null,
+  "timestamp": 1767771589.5935845,
+  "upvotes": 0,
+  "downvotes": 0,
+  "vote_score": 0,
+  "comment_count": 3,
+  "last_activity": 1767786602.717042,
+  "comments_data": {
+    "14f323e6-a253-4bd9-a9eb-c5baff28b6cf": {
+      "comment_id": "14f323e6-a253-4bd9-a9eb-c5baff28b6cf",
+      "topic_id": "81a61baa-fb15-4531-a4a3-0fd43ffd5e24",
+      "content": "\u6574\u7406\u756a\u8304\u7092\u86cb\u7684\u83dc\u8c31",
+      "author_id": "admin",
+      "timestamp": 1767778406.0263941,
+      "parent_comment_id": null,
+      "thread_level": 1,
+      "upvotes": 0,
+      "downvotes": 0,
+      "vote_score": 0
+    },
+    "0414b3ea-a60b-4c90-9a57-90f028ae131d": {
+      "comment_id": "0414b3ea-a60b-4c90-9a57-90f028ae131d",
+      "topic_id": "81a61baa-fb15-4531-a4a3-0fd43ffd5e24",
+      "content": "\u756a\u8304\u7092\u86cb\u505a\u6cd5",
+      "author_id": "admin",
+      "timestamp": 1767780573.133606,
+      "parent_comment_id": null,
+      "thread_level": 1,
+      "upvotes": 0,
+      "downvotes": 0,
+      "vote_score": 0
+    },
+    "7add9844-8959-43e3-9dba-9adcfa506d16": {
+      "comment_id": "7add9844-8959-43e3-9dba-9adcfa506d16",
+      "topic_id": "81a61baa-fb15-4531-a4a3-0fd43ffd5e24",
+      "content": "\u756a\u8304\u7092\u86cb\u83dc\u8c31",
+      "author_id": "admin",
+      "timestamp": 1767786602.717042,
+      "parent_comment_id": null,
+      "thread_level": 1,
+      "upvotes": 0,
+      "downvotes": 0,
+      "vote_score": 0
+    }
+  },
+  "comment_tree_data": {},
+  "root_comments": [
+    "14f323e6-a253-4bd9-a9eb-c5baff28b6cf",
+    "0414b3ea-a60b-4c90-9a57-90f028ae131d",
+    "7add9844-8959-43e3-9dba-9adcfa506d16"
+  ]
+}

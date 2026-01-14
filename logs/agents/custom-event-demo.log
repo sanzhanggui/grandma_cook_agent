@@ -1,0 +1,1820 @@
+
+============================================================
+[2026-01-07 23:35:24] Starting agent 'custom-event-demo'
+============================================================
+
+[STDERR] INFO:openagents.utils.mod_loaders:Successfully loaded mod adapter: openagents.mods.workspace.messaging
+[STDERR] INFO:openagents.utils.mod_loaders:Instantiated adapter for openagents.mods.workspace.messaging (no args)
+[STDERR] INFO:openagents.mods.workspace.messaging.adapter:Initializing Thread Messaging protocol for agent custom-event-demo with file storage at C:\Users\PC\AppData\Local\Temp\openagents_agent_custom-event-demo_threads_hkvobcaf
+[STDERR] INFO:openagents.core.client:Registered mod adapter ThreadMessagingAgentAdapter with agent custom-event-demo
+[STDERR] INFO:openagents.agents.runner:Updated available tools for agent custom-event-demo: ['send_direct_message', 'send_channel_message', 'reply_channel_message', 'list_channels', 'retrieve_channel_messages', 'retrieve_direct_messages', 'react_to_message']
+[STDERR] INFO:openagents.agents.worker_agent:WorkerAgent 'custom-event-demo' collected 8 event handlers for patterns: ['thread.channel_message.notification', 'thread.reply.notification', 'thread.direct_message.notification', 'thread.file.upload_response', 'agent.message', 'thread.reaction.notification', 'custom.hello_world', 'demo.text.process']
+[STDERR] INFO:openagents.agents.worker_agent:Initialized WorkerAgent 'custom-event-demo' with ID: custom-event-demo
+[STDERR] INFO:__main__:Intialized Custom Event Demo Agent with ID: custom-event-demo
+[STDERR] INFO:openagents.core.client:✅ Successfully retrieved health check from http://localhost:8700/api/health
+[STDERR] INFO:openagents.core.client:Detected network: GrandmaCookNetwork (grandma-cook-network-1)
+[STDERR] INFO:openagents.core.client:Transport: grpc, Host: localhost, Port: 8600
+[STDERR] INFO:openagents.core.client:Creating gRPC connector for agent custom-event-demo
+[STDERR] INFO:openagents.core.connectors.grpc_connector:Connecting to gRPC server at localhost:8600
+[STDERR] INFO:openagents.core.connectors.grpc_connector:Connected to gRPC network successfully
+[STDERR] INFO:openagents.core.client:🔧 Starting message polling for  agent custom-event-demo
+[STDERR] INFO:openagents.core.client:🔧 CLIENT: Starting message polling for agent custom-event-demo
+[STDERR] INFO:openagents.agents.runner:Supported mod: openagents.mods.workspace.messaging (v1.0.0)
+[STDERR] INFO:openagents.agents.runner:Supported mod: openagents.mods.workspace.default (v1.0.0)
+[STDERR] INFO:openagents.agents.runner:Supported mod: openagents.mods.workspace.shared_artifact (v1.0.0)
+[STDERR] INFO:openagents.agents.runner:Supported mod: openagents.mods.workspace.forum (v1.0.0)
+[STDERR] INFO:openagents.agents.worker_agent:Setting up WorkerAgent 'custom-event-demo'
+[STDERR] INFO:openagents.agents.worker_agent:Found thread messaging adapter with key: openagents.mods.workspace.messaging
+[STDERR] INFO:openagents.agents.worker_agent:Thread messaging events will be handled through the event system
+[STDERR] INFO:__main__:🤖 Custom Event Demo Agent 'custom-event-demo' starting up...
+[STDERR] INFO:__main__:✅ Successfully sent startup message to general channel
+[STDERR] INFO:__main__:✅ Custom Event Demo Agent startup complete
+[STDERR] INFO:openagents.agents.worker_agent:WorkerAgent 'custom-event-demo' setup complete
+🚀 Starting Custom Event Demo Agent...
+============================================================
+This agent demonstrates custom event handling with @on_event
+It handles 'custom.hello_world' and 'demo.text.process' events
+------------------------------------------------------------
+🔌 Connecting to network...
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: system.list_mods to system:system
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  system.list_mods                                                    [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: system:system                                                       [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "agent_id": "custom-event-demo"                                           [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: system.list_mods
+   Success: True
+   Message: Mod list retrieved successfully
+   Response data keys: ['type', 'command', 'mods']
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: thread.channel_message.post to channel:general
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  thread.channel_message.post                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: channel:general                                                     [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "action": "channel_message",                                              [92m║[0m
+[92m║[0m   "message_type": "channel_message",                                        [92m║[0m
+[92m║[0m   "channel": "general",                                                     [92m║[0m
+[92m║[0m   "content": {                                                              [92m║[0m
+[92m║[0m     "text": "\ud83e\udd16 **Custom Event Demo Agent Online!**"              [92m║[0m
+[92m║[0m   }                                                                         [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  thread.channel_message.post                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: channel:general                                                     [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "action": "channel_message",                                              [92m║[0m
+[92m║[0m   "message_type": "channel_message",                                        [92m║[0m
+[92m║[0m   "channel": "general",                                                     [92m║[0m
+[92m║[0m   "content": {                                                              [92m║[0m
+[92m║[0m     "text": "\ud83e\udd16 **Custom Event Demo Agent Online!**"              [92m║[0m
+[92m║[0m   }                                                                         [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: thread.channel_message.post
+   Success: True
+   Message: Thread channel message event thread.channel_message.post processed successfully
+   Response data keys: ['event_name', 'event_id']
+✅ Connected successfully!
+🤖 Custom Event Demo Agent is now active...
+📋 Press Ctrl+C to stop the agent
+📤 Sending custom.hello_world event with 'Hello World!'
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: custom.hello_world to custom-event-demo
+[STDERR] ERROR:openagents.core.connectors.grpc_connector:Failed to send gRPC event 2bf1c72a-38b8-4ef7-a591-23813a00bb6a: Authentication failed: Invalid or missing secret
+[STDERR] INFO:__main__:Received custom.hello_world event: {'text': 'Hello World!', 'prefix': '[GREETING]'}
+[STDERR] INFO:__main__:Processing: 'Hello World!' -> '[GREETING] Hello World!'
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  custom.hello_world                                                  [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: custom-event-demo                                                   [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "text": "Hello World!",                                                   [92m║[0m
+[92m║[0m   "prefix": "[GREETING]"                                                    [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  custom.hello_world                                                  [92m║[0m
+[92m║[0m Source: test_sender                                                         [92m║[0m
+[92m║[0m Target: custom-event-demo                                                   [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "text": "Hello World!",                                                   [92m║[0m
+[92m║[0m   "prefix": "[GREETING]"                                                    [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: custom.hello_world
+   Success: False
+   Message: Authentication failed: Invalid or missing secret
+🔧 AGENT_RUNNER: Calling react method for event custom.hello_world
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: thread.channel_message.post to channel:general
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  thread.channel_message.post                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: channel:general                                                     [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "action": "channel_message",                                              [92m║[0m
+[92m║[0m   "message_type": "channel_message",                                        [92m║[0m
+[92m║[0m   "channel": "general",                                                     [92m║[0m
+[92m║[0m   "content": {                                                              [92m║[0m
+[92m║[0m     "text": "\ud83d\udd04 Custom event processed: 'Hello World!' => '[GREETING] Hello World!'" [92m║[0m
+[92m║[0m   }                                                                         [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  thread.channel_message.post                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: channel:general                                                     [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "action": "channel_message",                                              [92m║[0m
+[92m║[0m   "message_type": "channel_message",                                        [92m║[0m
+[92m║[0m   "channel": "general",                                                     [92m║[0m
+[92m║[0m   "content": {                                                              [92m║[0m
+[92m║[0m     "text": "\ud83d\udd04 Custom event processed: 'Hello World!' => '[GREETING] Hello World!'" [92m║[0m
+[92m║[0m   }                                                                         [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: thread.channel_message.post
+   Success: True
+   Message: Thread channel message event thread.channel_message.post processed successfully
+   Response data keys: ['event_name', 'event_id']
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: custom.hello_world.response to test_sender
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  custom.hello_world.response                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: test_sender                                                         [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "original_text": "Hello World!",                                          [92m║[0m
+[92m║[0m   "processed_text": "[GREETING] Hello World!",                              [92m║[0m
+[92m║[0m   "status": "processed"                                                     [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  custom.hello_world.response                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: test_sender                                                         [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "original_text": "Hello World!",                                          [92m║[0m
+[92m║[0m   "processed_text": "[GREETING] Hello World!",                              [92m║[0m
+[92m║[0m   "status": "processed"                                                     [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: custom.hello_world.response
+   Success: True
+   Message: Event custom.hello_world.response delivered to destination
+✅ AGENT RESPONSE COMPLETED: 2bf1c72a
+   Processing time: 0.04s
+   Message marked as processed
+📤 Sending custom.hello_world event with 'OpenAgents is awesome!'
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: custom.hello_world to custom-event-demo
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  custom.hello_world                                                  [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: custom-event-demo                                                   [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "text": "OpenAgents is awesome!",                                         [92m║[0m
+[92m║[0m   "prefix": "[EXCITEMENT]"                                                  [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[STDERR] ERROR:openagents.core.connectors.grpc_connector:Failed to send gRPC event 4ba75bd2-f446-4fdf-8336-5bcbb8c3ed80: Authentication failed: Invalid or missing secret
+[STDERR] INFO:__main__:Received custom.hello_world event: {'text': 'OpenAgents is awesome!', 'prefix': '[EXCITEMENT]'}
+[STDERR] INFO:__main__:Processing: 'OpenAgents is awesome!' -> '[EXCITEMENT] OpenAgents is awesome!'
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  custom.hello_world                                                  [92m║[0m
+[92m║[0m Source: test_sender                                                         [92m║[0m
+[92m║[0m Target: custom-event-demo                                                   [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "text": "OpenAgents is awesome!",                                         [92m║[0m
+[92m║[0m   "prefix": "[EXCITEMENT]"                                                  [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: custom.hello_world
+   Success: False
+   Message: Authentication failed: Invalid or missing secret
+🔧 AGENT_RUNNER: Calling react method for event custom.hello_world
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: thread.channel_message.post to channel:general
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  thread.channel_message.post                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: channel:general                                                     [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "action": "channel_message",                                              [92m║[0m
+[92m║[0m   "message_type": "channel_message",                                        [92m║[0m
+[92m║[0m   "channel": "general",                                                     [92m║[0m
+[92m║[0m   "content": {                                                              [92m║[0m
+[92m║[0m     "text": "\ud83d\udd04 Custom event processed: 'OpenAgents is awesome!' => '[EXCITEMENT] OpenAgents is awesome!'" [92m║[0m
+[92m║[0m   }                                                                         [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  thread.channel_message.post                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: channel:general                                                     [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "action": "channel_message",                                              [92m║[0m
+[92m║[0m   "message_type": "channel_message",                                        [92m║[0m
+[92m║[0m   "channel": "general",                                                     [92m║[0m
+[92m║[0m   "content": {                                                              [92m║[0m
+[92m║[0m     "text": "\ud83d\udd04 Custom event processed: 'OpenAgents is awesome!' => '[EXCITEMENT] OpenAgents is awesome!'" [92m║[0m
+[92m║[0m   }                                                                         [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: thread.channel_message.post
+   Success: True
+   Message: Thread channel message event thread.channel_message.post processed successfully
+   Response data keys: ['event_name', 'event_id']
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: custom.hello_world.response to test_sender
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[STDERR] ERROR:openagents.core.connectors.grpc_connector:Failed to send gRPC event f109f4a3-ee87-47ab-9bc0-bcf0bb89f1ba: Authentication failed: Invalid or missing secret
+[STDERR] INFO:__main__:Received demo.text.process event: {'text': 'hello', 'operation': 'uppercase'}
+[92m║[0m Event:  custom.hello_world.response                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: test_sender                                                         [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "original_text": "OpenAgents is awesome!",                                [92m║[0m
+[92m║[0m   "processed_text": "[EXCITEMENT] OpenAgents is awesome!",                  [92m║[0m
+[92m║[0m   "status": "processed"                                                     [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  custom.hello_world.response                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: test_sender                                                         [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "original_text": "OpenAgents is awesome!",                                [92m║[0m
+[92m║[0m   "processed_text": "[EXCITEMENT] OpenAgents is awesome!",                  [92m║[0m
+[92m║[0m   "status": "processed"                                                     [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: custom.hello_world.response
+   Success: True
+   Message: Event custom.hello_world.response delivered to destination
+✅ AGENT RESPONSE COMPLETED: 4ba75bd2
+   Processing time: 0.05s
+   Message marked as processed
+📤 Sending demo.text.process event with 'hello' and 'uppercase' operation
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: demo.text.process to custom-event-demo
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  demo.text.process                                                   [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: custom-event-demo                                                   [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "text": "hello",                                                          [92m║[0m
+[92m║[0m   "operation": "uppercase"                                                  [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  demo.text.process                                                   [92m║[0m
+[92m║[0m Source: test_sender                                                         [92m║[0m
+[92m║[0m Target: custom-event-demo                                                   [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "text": "hello",                                                          [92m║[0m
+[92m║[0m   "operation": "uppercase"                                                  [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: demo.text.process
+   Success: False
+   Message: Authentication failed: Invalid or missing secret
+🔧 AGENT_RUNNER: Calling react method for event demo.text.process
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: thread.channel_message.post to channel:general
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+[STDERR] INFO:openagents.core.client:📥 RECEIVED EVENT: thread.direct_message.notification | Source: admin | Target: agent:custom-event-demo
+[STDERR] INFO:openagents.agents.worker_agent:🔧 WORKER_AGENT: Calling on_direct with source=admin
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  thread.channel_message.post                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: channel:general                                                     [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "action": "channel_message",                                              [92m║[0m
+[92m║[0m   "message_type": "channel_message",                                        [92m║[0m
+[92m║[0m   "channel": "general",                                                     [92m║[0m
+[92m║[0m   "content": {                                                              [92m║[0m
+[92m║[0m     "text": "\u2699\ufe0f Text operation 'uppercase' applied: 'hello' => 'HELLO'" [92m║[0m
+[92m║[0m   }                                                                         [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  thread.channel_message.post                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: channel:general                                                     [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "action": "channel_message",                                              [92m║[0m
+[92m║[0m   "message_type": "channel_message",                                        [92m║[0m
+[92m║[0m   "channel": "general",                                                     [92m║[0m
+[92m║[0m   "content": {                                                              [92m║[0m
+[92m║[0m     "text": "\u2699\ufe0f Text operation 'uppercase' applied: 'hello' => 'HELLO'" [92m║[0m
+[92m║[0m   }                                                                         [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: thread.channel_message.post
+   Success: True
+   Message: Thread channel message event thread.channel_message.post processed successfully
+   Response data keys: ['event_name', 'event_id']
+✅ AGENT RESPONSE COMPLETED: f109f4a3
+   Processing time: 0.03s
+   Message marked as processed
+
+[96m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[96m║[0m [1m📥 RECEIVED EVENT[0m                                                            [96m║[0m
+[96m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[96m║[0m Event:  thread.direct_message.notification                                  [96m║[0m
+[96m║[0m Source: admin                                                               [96m║[0m
+[96m║[0m Target: agent:custom-event-demo                                             [96m║[0m
+[96m║[0m ──────────────────────────────────────────────────────────────────────────── [96m║[0m
+[96m║[0m {                                                                           [96m║[0m
+[96m║[0m   "target_agent_id": "custom-event-demo",                                   [96m║[0m
+[96m║[0m   "content": {                                                              [96m║[0m
+[96m║[0m     "text": "hello"                                                         [96m║[0m
+[96m║[0m   },                                                                        [96m║[0m
+[96m║[0m   "message_type": "direct_message",                                         [96m║[0m
+[96m║[0m   "sender_id": "admin"                                                      [96m║[0m
+[96m║[0m }                                                                           [96m║[0m
+[96m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+🔧 AGENT_RUNNER: Calling react method for event thread.direct_message.notification
+✅ AGENT RESPONSE COMPLETED: 138e53cf
+   Processing time: 0.00s
+   Message marked as processed
+
+[96m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[96m║[0m [1m📥 RECEIVED EVENT[0m                                                            [96m║[0m
+[96m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[96m║[0m Event:  thread.direct_message.notification                                  [96m║[0m
+[96m║[0m Source: admin                                                               [96m║[0m
+[STDERR] INFO:openagents.core.client:📥 RECEIVED EVENT: thread.direct_message.notification | Source: admin | Target: agent:custom-event-demo
+[STDERR] INFO:openagents.agents.worker_agent:🔧 WORKER_AGENT: Calling on_direct with source=admin
+[STDERR] INFO:openagents.core.client:📥 RECEIVED EVENT: thread.channel_message.notification | Source: admin | Target: custom-event-demo
+[STDERR] INFO:openagents.core.client:📥 RECEIVED EVENT: thread.channel_message.notification | Source: admin | Target: custom-event-demo
+
+[2026-01-07 23:41:37] Stopping agent 'custom-event-demo'
+[96m║[0m Target: agent:custom-event-demo                                             [96m║[0m[2026-01-07 23:41:37] Agent stopped
+============================================================
+
+
+============================================================
+[2026-01-08 10:24:53] Starting agent 'custom-event-demo'
+============================================================
+
+[STDERR] INFO:openagents.utils.mod_loaders:Successfully loaded mod adapter: openagents.mods.workspace.messaging
+[STDERR] INFO:openagents.utils.mod_loaders:Instantiated adapter for openagents.mods.workspace.messaging (no args)
+[STDERR] INFO:openagents.mods.workspace.messaging.adapter:Initializing Thread Messaging protocol for agent custom-event-demo with file storage at C:\Users\PC\AppData\Local\Temp\openagents_agent_custom-event-demo_threads_s_rs1xv8
+[STDERR] INFO:openagents.core.client:Registered mod adapter ThreadMessagingAgentAdapter with agent custom-event-demo
+[STDERR] INFO:openagents.agents.runner:Updated available tools for agent custom-event-demo: ['send_direct_message', 'send_channel_message', 'reply_channel_message', 'list_channels', 'retrieve_channel_messages', 'retrieve_direct_messages', 'react_to_message']
+[STDERR] INFO:openagents.agents.worker_agent:WorkerAgent 'custom-event-demo' collected 8 event handlers for patterns: ['thread.channel_message.notification', 'thread.reply.notification', 'thread.direct_message.notification', 'thread.file.upload_response', 'agent.message', 'thread.reaction.notification', 'custom.hello_world', 'demo.text.process']
+[STDERR] INFO:openagents.agents.worker_agent:Initialized WorkerAgent 'custom-event-demo' with ID: custom-event-demo
+[STDERR] INFO:__main__:Intialized Custom Event Demo Agent with ID: custom-event-demo
+[STDERR] INFO:openagents.core.client:✅ Successfully retrieved health check from http://localhost:8700/api/health
+[STDERR] INFO:openagents.core.client:Detected network: GrandmaCookNetwork (grandma-cook-network-1)
+[STDERR] INFO:openagents.core.client:Transport: grpc, Host: localhost, Port: 8600
+[STDERR] INFO:openagents.core.client:Creating gRPC connector for agent custom-event-demo
+[STDERR] INFO:openagents.core.connectors.grpc_connector:Connecting to gRPC server at localhost:8600
+[STDERR] INFO:openagents.core.connectors.grpc_connector:Connected to gRPC network successfully
+[STDERR] INFO:openagents.core.client:🔧 Starting message polling for  agent custom-event-demo
+[STDERR] INFO:openagents.core.client:🔧 CLIENT: Starting message polling for agent custom-event-demo
+[STDERR] INFO:openagents.agents.runner:Supported mod: openagents.mods.workspace.forum (v1.0.0)
+[STDERR] INFO:openagents.agents.runner:Supported mod: openagents.mods.workspace.messaging (v1.0.0)
+[STDERR] INFO:openagents.agents.runner:Supported mod: openagents.mods.workspace.default (v1.0.0)
+[STDERR] INFO:openagents.agents.runner:Supported mod: openagents.mods.workspace.shared_artifact (v1.0.0)
+[STDERR] INFO:openagents.agents.worker_agent:Setting up WorkerAgent 'custom-event-demo'
+[STDERR] INFO:openagents.agents.worker_agent:Found thread messaging adapter with key: openagents.mods.workspace.messaging
+[STDERR] INFO:openagents.agents.worker_agent:Thread messaging events will be handled through the event system
+[STDERR] INFO:__main__:🤖 Custom Event Demo Agent 'custom-event-demo' starting up...
+[STDERR] INFO:__main__:✅ Successfully sent startup message to general channel
+[STDERR] INFO:__main__:✅ Custom Event Demo Agent startup complete
+[STDERR] INFO:openagents.agents.worker_agent:WorkerAgent 'custom-event-demo' setup complete
+🚀 Starting Custom Event Demo Agent...
+============================================================
+This agent demonstrates custom event handling with @on_event
+It handles 'custom.hello_world' and 'demo.text.process' events
+------------------------------------------------------------
+🔌 Connecting to network...
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: system.list_mods to system:system
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  system.list_mods                                                    [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: system:system                                                       [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "agent_id": "custom-event-demo"                                           [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: system.list_mods
+   Success: True
+   Message: Mod list retrieved successfully
+   Response data keys: ['type', 'command', 'mods']
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: thread.channel_message.post to channel:general
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  thread.channel_message.post                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: channel:general                                                     [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "action": "channel_message",                                              [92m║[0m
+[92m║[0m   "message_type": "channel_message",                                        [92m║[0m
+[92m║[0m   "channel": "general",                                                     [92m║[0m
+[92m║[0m   "content": {                                                              [92m║[0m
+[92m║[0m     "text": "\ud83e\udd16 **Custom Event Demo Agent Online!**"              [92m║[0m
+[92m║[0m   }                                                                         [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  thread.channel_message.post                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: channel:general                                                     [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "action": "channel_message",                                              [92m║[0m
+[92m║[0m   "message_type": "channel_message",                                        [92m║[0m
+[92m║[0m   "channel": "general",                                                     [92m║[0m
+[92m║[0m   "content": {                                                              [92m║[0m
+[92m║[0m     "text": "\ud83e\udd16 **Custom Event Demo Agent Online!**"              [92m║[0m
+[92m║[0m   }                                                                         [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: thread.channel_message.post
+   Success: True
+   Message: Thread channel message event thread.channel_message.post processed successfully
+   Response data keys: ['event_name', 'event_id']
+✅ Connected successfully!
+🤖 Custom Event Demo Agent is now active...
+📋 Press Ctrl+C to stop the agent
+📤 Sending custom.hello_world event with 'Hello World!'
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: custom.hello_world to custom-event-demo
+[STDERR] ERROR:openagents.core.connectors.grpc_connector:Failed to send gRPC event 8ad2ed5c-3e22-4601-ad03-bbe783bd4edf: Authentication failed: Invalid or missing secret
+[STDERR] INFO:__main__:Received custom.hello_world event: {'text': 'Hello World!', 'prefix': '[GREETING]'}
+[STDERR] INFO:__main__:Processing: 'Hello World!' -> '[GREETING] Hello World!'
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  custom.hello_world                                                  [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: custom-event-demo                                                   [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "text": "Hello World!",                                                   [92m║[0m
+[92m║[0m   "prefix": "[GREETING]"                                                    [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  custom.hello_world                                                  [92m║[0m
+[92m║[0m Source: test_sender                                                         [92m║[0m
+[92m║[0m Target: custom-event-demo                                                   [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "text": "Hello World!",                                                   [92m║[0m
+[92m║[0m   "prefix": "[GREETING]"                                                    [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: custom.hello_world
+   Success: False
+   Message: Authentication failed: Invalid or missing secret
+🔧 AGENT_RUNNER: Calling react method for event custom.hello_world
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: thread.channel_message.post to channel:general
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  thread.channel_message.post                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: channel:general                                                     [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "action": "channel_message",                                              [92m║[0m
+[92m║[0m   "message_type": "channel_message",                                        [92m║[0m
+[92m║[0m   "channel": "general",                                                     [92m║[0m
+[92m║[0m   "content": {                                                              [92m║[0m
+[92m║[0m     "text": "\ud83d\udd04 Custom event processed: 'Hello World!' => '[GREETING] Hello World!'" [92m║[0m
+[92m║[0m   }                                                                         [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  thread.channel_message.post                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: channel:general                                                     [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "action": "channel_message",                                              [92m║[0m
+[92m║[0m   "message_type": "channel_message",                                        [92m║[0m
+[92m║[0m   "channel": "general",                                                     [92m║[0m
+[92m║[0m   "content": {                                                              [92m║[0m
+[92m║[0m     "text": "\ud83d\udd04 Custom event processed: 'Hello World!' => '[GREETING] Hello World!'" [92m║[0m
+[92m║[0m   }                                                                         [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+📤 Sending custom.hello_world event with 'OpenAgents is awesome!'
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: custom.hello_world to custom-event-demo
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  custom.hello_world                                                  [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: custom-event-demo                                                   [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "text": "OpenAgents is awesome!",                                         [92m║[0m
+[92m║[0m   "prefix": "[EXCITEMENT]"                                                  [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  custom.hello_world                                                  [92m║[0m
+[92m║[0m Source: test_sender                                                         [92m║[0m
+[92m║[0m Target: custom-event-demo                                                   [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "text": "OpenAgents is awesome!",                                         [92m║[0m
+[92m║[0m   "prefix": "[EXCITEMENT]"                                                  [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: thread.channel_message.post
+   Success: True
+   Message: Thread channel message event thread.channel_message.post processed successfully
+   Response data keys: ['event_name', 'event_id']
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: custom.hello_world.response to test_sender
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  custom.hello_world.response                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: test_sender                                                         [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "original_text": "Hello World!",                                          [92m║[0m
+[92m║[0m   "processed_text": "[GREETING] Hello World!",                              [92m║[0m
+[92m║[0m   "status": "processed"                                                     [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[STDERR] ERROR:openagents.core.connectors.grpc_connector:Failed to send gRPC event 6b5d54dc-1f7a-4a3f-b16a-387221cf6bde: Authentication failed: Invalid or missing secret
+[STDERR] INFO:__main__:Received custom.hello_world event: {'text': 'OpenAgents is awesome!', 'prefix': '[EXCITEMENT]'}
+[STDERR] INFO:__main__:Processing: 'OpenAgents is awesome!' -> '[EXCITEMENT] OpenAgents is awesome!'
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  custom.hello_world.response                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: test_sender                                                         [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "original_text": "Hello World!",                                          [92m║[0m
+[92m║[0m   "processed_text": "[GREETING] Hello World!",                              [92m║[0m
+[92m║[0m   "status": "processed"                                                     [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: custom.hello_world
+   Success: False
+   Message: Authentication failed: Invalid or missing secret
+✅ EVENT SENT: custom.hello_world.response
+   Success: True
+   Message: Event custom.hello_world.response delivered to destination
+✅ AGENT RESPONSE COMPLETED: 8ad2ed5c
+   Processing time: 2.38s
+   🤖 LLM API call detected (response time > 1s)
+   Message marked as processed
+🔧 AGENT_RUNNER: Calling react method for event custom.hello_world
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: thread.channel_message.post to channel:general
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  thread.channel_message.post                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: channel:general                                                     [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "action": "channel_message",                                              [92m║[0m
+[92m║[0m   "message_type": "channel_message",                                        [92m║[0m
+[92m║[0m   "channel": "general",                                                     [92m║[0m
+[92m║[0m   "content": {                                                              [92m║[0m
+[92m║[0m     "text": "\ud83d\udd04 Custom event processed: 'OpenAgents is awesome!' => '[EXCITEMENT] OpenAgents is awesome!'" [92m║[0m
+[92m║[0m   }                                                                         [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  thread.channel_message.post                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: channel:general                                                     [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "action": "channel_message",                                              [92m║[0m
+[92m║[0m   "message_type": "channel_message",                                        [92m║[0m
+[92m║[0m   "channel": "general",                                                     [92m║[0m
+[92m║[0m   "content": {                                                              [92m║[0m
+[92m║[0m     "text": "\ud83d\udd04 Custom event processed: 'OpenAgents is awesome!' => '[EXCITEMENT] OpenAgents is awesome!'" [92m║[0m
+[92m║[0m   }                                                                         [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: thread.channel_message.post
+   Success: True
+   Message: Thread channel message event thread.channel_message.post processed successfully
+   Response data keys: ['event_name', 'event_id']
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: custom.hello_world.response to test_sender
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[STDERR] ERROR:openagents.core.connectors.grpc_connector:Failed to send gRPC event b831703a-7556-47a1-9daf-eb29c05a6174: Authentication failed: Invalid or missing secret
+[STDERR] INFO:__main__:Received demo.text.process event: {'text': 'hello', 'operation': 'uppercase'}
+[92m║[0m Event:  custom.hello_world.response                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: test_sender                                                         [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "original_text": "OpenAgents is awesome!",                                [92m║[0m
+[92m║[0m   "processed_text": "[EXCITEMENT] OpenAgents is awesome!",                  [92m║[0m
+[92m║[0m   "status": "processed"                                                     [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  custom.hello_world.response                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: test_sender                                                         [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "original_text": "OpenAgents is awesome!",                                [92m║[0m
+[92m║[0m   "processed_text": "[EXCITEMENT] OpenAgents is awesome!",                  [92m║[0m
+[92m║[0m   "status": "processed"                                                     [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: custom.hello_world.response
+   Success: True
+   Message: Event custom.hello_world.response delivered to destination
+✅ AGENT RESPONSE COMPLETED: 6b5d54dc
+   Processing time: 0.29s
+   Message marked as processed
+📤 Sending demo.text.process event with 'hello' and 'uppercase' operation
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: demo.text.process to custom-event-demo
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  demo.text.process                                                   [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: custom-event-demo                                                   [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "text": "hello",                                                          [92m║[0m
+[92m║[0m   "operation": "uppercase"                                                  [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  demo.text.process                                                   [92m║[0m
+[92m║[0m Source: test_sender                                                         [92m║[0m
+[92m║[0m Target: custom-event-demo                                                   [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "text": "hello",                                                          [92m║[0m
+[92m║[0m   "operation": "uppercase"                                                  [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: demo.text.process
+   Success: False
+   Message: Authentication failed: Invalid or missing secret
+🔧 AGENT_RUNNER: Calling react method for event demo.text.process
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: thread.channel_message.post to channel:general
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+[STDERR] INFO:openagents.core.client:📥 RECEIVED EVENT: thread.direct_message.notification | Source: admin | Target: agent:custom-event-demo
+[STDERR] INFO:openagents.agents.worker_agent:🔧 WORKER_AGENT: Calling on_direct with source=admin
+
+[2026-01-08 10:58:00] Stopping agent 'custom-event-demo'
+   Processing through openagents.mods.workspace.messaging adapter...[2026-01-08 10:58:00] Agent stopped
+============================================================
+
+
+============================================================
+[2026-01-08 10:58:01] Starting agent 'custom-event-demo'
+============================================================
+
+[STDERR] INFO:openagents.utils.mod_loaders:Successfully loaded mod adapter: openagents.mods.workspace.messaging
+[STDERR] INFO:openagents.utils.mod_loaders:Instantiated adapter for openagents.mods.workspace.messaging (no args)
+[STDERR] INFO:openagents.mods.workspace.messaging.adapter:Initializing Thread Messaging protocol for agent custom-event-demo with file storage at C:\Users\PC\AppData\Local\Temp\openagents_agent_custom-event-demo_threads_s4gav0e2
+[STDERR] INFO:openagents.core.client:Registered mod adapter ThreadMessagingAgentAdapter with agent custom-event-demo
+[STDERR] INFO:openagents.agents.runner:Updated available tools for agent custom-event-demo: ['send_direct_message', 'send_channel_message', 'reply_channel_message', 'list_channels', 'retrieve_channel_messages', 'retrieve_direct_messages', 'react_to_message']
+[STDERR] INFO:openagents.agents.worker_agent:WorkerAgent 'custom-event-demo' collected 10 event handlers for patterns: ['thread.channel_message.notification', 'thread.reply.notification', 'thread.direct_message.notification', 'thread.file.upload_response', 'agent.message', 'thread.reaction.notification', 'custom.hello_world', 'demo.text.process', 'recipe.request', 'thread.direct_message.notification']
+[STDERR] INFO:openagents.agents.worker_agent:Initialized WorkerAgent 'custom-event-demo' with ID: custom-event-demo
+[STDERR] INFO:__main__:Initialized Custom Event Demo Agent with ID: custom-event-demo
+[STDERR] INFO:openagents.core.client:✅ Successfully retrieved health check from http://localhost:8700/api/health
+[STDERR] INFO:openagents.core.client:Detected network: GrandmaCookNetwork (grandma-cook-network-1)
+[STDERR] INFO:openagents.core.client:Transport: grpc, Host: localhost, Port: 8600
+[STDERR] INFO:openagents.core.client:Creating gRPC connector for agent custom-event-demo
+[STDERR] INFO:openagents.core.connectors.grpc_connector:Connecting to gRPC server at localhost:8600
+[STDERR] INFO:openagents.core.connectors.grpc_connector:Connected to gRPC network successfully
+[STDERR] INFO:openagents.core.client:🔧 Starting message polling for  agent custom-event-demo
+[STDERR] INFO:openagents.core.client:🔧 CLIENT: Starting message polling for agent custom-event-demo
+[STDERR] INFO:openagents.agents.runner:Supported mod: openagents.mods.workspace.forum (v1.0.0)
+[STDERR] INFO:openagents.agents.runner:Supported mod: openagents.mods.workspace.messaging (v1.0.0)
+[STDERR] INFO:openagents.agents.runner:Supported mod: openagents.mods.workspace.default (v1.0.0)
+[STDERR] INFO:openagents.agents.runner:Supported mod: openagents.mods.workspace.shared_artifact (v1.0.0)
+[STDERR] INFO:openagents.agents.worker_agent:Setting up WorkerAgent 'custom-event-demo'
+[STDERR] INFO:openagents.agents.worker_agent:Found thread messaging adapter with key: openagents.mods.workspace.messaging
+[STDERR] INFO:openagents.agents.worker_agent:Thread messaging events will be handled through the event system
+[STDERR] INFO:__main__:🤖 Custom Event Demo Agent 'custom-event-demo' starting up...
+[STDERR] ERROR:openagents.core.workspace:Failed to list channels: 'AgentClient' object has no attribute 'wait_mod_message'
+[STDERR] INFO:__main__:📺 Available channels: ['#general', '#dev', '#support']
+[STDERR] INFO:__main__:✅ Custom Event Demo Agent startup complete
+[STDERR] INFO:openagents.agents.worker_agent:WorkerAgent 'custom-event-demo' setup complete
+[STDERR] ERROR:openagents.core.connectors.grpc_connector:Failed to send gRPC event 0bfa728e-a26c-4ac5-ad89-cf68aed10850: Authentication failed: Invalid or missing secret
+[STDERR] INFO:__main__:Received custom.hello_world event: {'text': 'Hello World!', 'prefix': '[GREETING]'}
+[STDERR] INFO:__main__:Processing: 'Hello World!' -> '[GREETING] Hello World!'
+🚀 Starting Custom Event Demo Agent...
+============================================================
+This agent demonstrates custom event handling with @on_event
+It handles 'custom.hello_world' and 'demo.text.process' events
+------------------------------------------------------------
+🔌 Connecting to network...
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: system.list_mods to system:system
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  system.list_mods                                                    [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: system:system                                                       [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "agent_id": "custom-event-demo"                                           [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: system.list_mods
+   Success: True
+   Message: Mod list retrieved successfully
+   Response data keys: ['type', 'command', 'mods']
+✅ Connected successfully!
+🤖 Custom Event Demo Agent is now active...
+📋 Press Ctrl+C to stop the agent
+📤 Sending custom.hello_world event with 'Hello World!'
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: custom.hello_world to custom-event-demo
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  custom.hello_world                                                  [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: custom-event-demo                                                   [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "text": "Hello World!",                                                   [92m║[0m
+[92m║[0m   "prefix": "[GREETING]"                                                    [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  custom.hello_world                                                  [92m║[0m
+[92m║[0m Source: test_sender                                                         [92m║[0m
+[92m║[0m Target: custom-event-demo                                                   [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "text": "Hello World!",                                                   [92m║[0m
+[92m║[0m   "prefix": "[GREETING]"                                                    [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: custom.hello_world
+   Success: False
+   Message: Authentication failed: Invalid or missing secret
+🔧 AGENT_RUNNER: Calling react method for event custom.hello_world
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: thread.channel_message.post to channel:general
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  thread.channel_message.post                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: channel:general                                                     [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "action": "channel_message",                                              [92m║[0m
+[92m║[0m   "message_type": "channel_message",                                        [92m║[0m
+[92m║[0m   "channel": "general",                                                     [92m║[0m
+[92m║[0m   "content": {                                                              [92m║[0m
+[92m║[0m     "text": "\ud83d\udd04 Custom event processed: 'Hello World!' => '[GREETING] Hello World!'" [92m║[0m
+[92m║[0m   }                                                                         [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  thread.channel_message.post                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: channel:general                                                     [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "action": "channel_message",                                              [92m║[0m
+[92m║[0m   "message_type": "channel_message",                                        [92m║[0m
+[92m║[0m   "channel": "general",                                                     [92m║[0m
+[92m║[0m   "content": {                                                              [92m║[0m
+[92m║[0m     "text": "\ud83d\udd04 Custom event processed: 'Hello World!' => '[GREETING] Hello World!'" [92m║[0m
+[92m║[0m   }                                                                         [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: thread.channel_message.post
+   Success: True
+   Message: Thread channel message event thread.channel_message.post processed successfully
+   Response data keys: ['event_name', 'event_id']
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: custom.hello_world.response to test_sender
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  custom.hello_world.response                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: test_sender                                                         [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "original_text": "Hello World!",                                          [92m║[0m
+[92m║[0m   "processed_text": "[GREETING] Hello World!",                              [92m║[0m
+[92m║[0m   "status": "processed"                                                     [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  custom.hello_world.response                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: test_sender                                                         [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "original_text": "Hello World!",                                          [92m║[0m
+[92m║[0m   "processed_text": "[GREETING] Hello World!",                              [92m║[0m
+[92m║[0m   "status": "processed"                                                     [92m║[0m
+[STDERR] ERROR:openagents.core.connectors.grpc_connector:Failed to send gRPC event 706af335-f840-46f8-9615-e17a982d0e61: Authentication failed: Invalid or missing secret
+[STDERR] INFO:__main__:Received custom.hello_world event: {'text': 'OpenAgents is awesome!', 'prefix': '[EXCITEMENT]'}
+[STDERR] INFO:__main__:Processing: 'OpenAgents is awesome!' -> '[EXCITEMENT] OpenAgents is awesome!'
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: custom.hello_world.response
+   Success: True
+   Message: Event custom.hello_world.response delivered to destination
+✅ AGENT RESPONSE COMPLETED: 0bfa728e
+   Processing time: 0.18s
+   Message marked as processed
+📤 Sending custom.hello_world event with 'OpenAgents is awesome!'
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: custom.hello_world to custom-event-demo
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  custom.hello_world                                                  [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: custom-event-demo                                                   [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "text": "OpenAgents is awesome!",                                         [92m║[0m
+[92m║[0m   "prefix": "[EXCITEMENT]"                                                  [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  custom.hello_world                                                  [92m║[0m
+[92m║[0m Source: test_sender                                                         [92m║[0m
+[92m║[0m Target: custom-event-demo                                                   [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "text": "OpenAgents is awesome!",                                         [92m║[0m
+[92m║[0m   "prefix": "[EXCITEMENT]"                                                  [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: custom.hello_world
+   Success: False
+   Message: Authentication failed: Invalid or missing secret
+🔧 AGENT_RUNNER: Calling react method for event custom.hello_world
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: thread.channel_message.post to channel:general
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  thread.channel_message.post                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: channel:general                                                     [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "action": "channel_message",                                              [92m║[0m
+[92m║[0m   "message_type": "channel_message",                                        [92m║[0m
+[92m║[0m   "channel": "general",                                                     [92m║[0m
+[92m║[0m   "content": {                                                              [92m║[0m
+[92m║[0m     "text": "\ud83d\udd04 Custom event processed: 'OpenAgents is awesome!' => '[EXCITEMENT] OpenAgents is awesome!'" [92m║[0m
+[92m║[0m   }                                                                         [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  thread.channel_message.post                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: channel:general                                                     [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "action": "channel_message",                                              [92m║[0m
+[92m║[0m   "message_type": "channel_message",                                        [92m║[0m
+[92m║[0m   "channel": "general",                                                     [92m║[0m
+[92m║[0m   "content": {                                                              [92m║[0m
+[92m║[0m     "text": "\ud83d\udd04 Custom event processed: 'OpenAgents is awesome!' => '[EXCITEMENT] OpenAgents is awesome!'" [92m║[0m
+[92m║[0m   }                                                                         [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: thread.channel_message.post
+   Success: True
+   Message: Thread channel message event thread.channel_message.post processed successfully
+   Response data keys: ['event_name', 'event_id']
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: custom.hello_world.response to test_sender
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  custom.hello_world.response                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: test_sender                                                         [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "original_text": "OpenAgents is awesome!",                                [92m║[0m
+[92m║[0m   "processed_text": "[EXCITEMENT] OpenAgents is awesome!",                  [92m║[0m
+[92m║[0m   "status": "processed"                                                     [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  custom.hello_world.response                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: test_sender                                                         [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "original_text": "OpenAgents is awesome!",                                [92m║[0m
+[92m║[0m   "processed_text": "[EXCITEMENT] OpenAgents is awesome!",                  [92m║[0m
+[92m║[0m   "status": "processed"                                                     [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: custom.hello_world.response
+   Success: True
+   Message: Event custom.hello_world.response delivered to destination
+✅ AGENT RESPONSE COMPLETED: 706af335
+   Processing time: 0.24s
+   Message marked as processed
+📤 Sending demo.text.process event with 'hello' and 'uppercase' operation
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: demo.text.process to custom-event-demo
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  demo.text.process                                                   [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: custom-event-demo                                                   [92m║[0m
+[STDERR] ERROR:openagents.core.connectors.grpc_connector:Failed to send gRPC event bcd89341-cb34-43db-8ed3-be79a4102fe9: Authentication failed: Invalid or missing secret
+[STDERR] INFO:__main__:Received demo.text.process event: {'text': 'hello', 'operation': 'uppercase'}
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "text": "hello",                                                          [92m║[0m
+[92m║[0m   "operation": "uppercase"                                                  [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  demo.text.process                                                   [92m║[0m
+[92m║[0m Source: test_sender                                                         [92m║[0m
+[92m║[0m Target: custom-event-demo                                                   [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "text": "hello",                                                          [92m║[0m
+[92m║[0m   "operation": "uppercase"                                                  [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: demo.text.process
+   Success: False
+   Message: Authentication failed: Invalid or missing secret
+🔧 AGENT_RUNNER: Calling react method for event demo.text.process
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: thread.channel_message.post to channel:general
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  thread.channel_message.post                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: channel:general                                                     [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "action": "channel_message",                                              [92m║[0m
+[92m║[0m   "message_type": "channel_message",                                        [92m║[0m
+[92m║[0m   "channel": "general",                                                     [92m║[0m
+[92m║[0m   "content": {                                                              [92m║[0m
+[92m║[0m     "text": "\u2699\ufe0f Text operation 'uppercase' applied: 'hello' => 'HELLO'" [92m║[0m
+[92m║[0m   }                                                                         [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  thread.channel_message.post                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: channel:general                                                     [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "action": "channel_message",                                              [92m║[0m
+[92m║[0m   "message_type": "channel_message",                                        [92m║[0m
+[92m║[0m   "channel": "general",                                                     [92m║[0m
+[92m║[0m   "content": {                                                              [92m║[0m
+[92m║[0m     "text": "\u2699\ufe0f Text operation 'uppercase' applied: 'hello' => 'HELLO'" [92m║[0m
+[92m║[0m   }                                                                         [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: thread.channel_message.post
+   Success: True
+   Message: Thread channel message event thread.channel_message.post processed successfully
+   Response data keys: ['event_name', 'event_id']
+✅ AGENT RESPONSE COMPLETED: bcd89341
+   Processing time: 0.07s
+   Message marked as processed
+📤 Sending recipe.request event for '番茄炒蛋'
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: recipe.request to custom-event-demo
+[STDERR] ERROR:openagents.core.connectors.grpc_connector:Failed to send gRPC event 41d7102e-9390-41ac-abe8-b75c0fb51526: Authentication failed: Invalid or missing secret
+[STDERR] INFO:__main__:Received recipe request: {'recipe_name': '番茄炒蛋', 'ingredients': ['鸡蛋', '番茄', '盐', '油', '葱']}
+[STDERR] INFO:__main__:Generated recipe for: '番茄炒蛋' with 5 ingredients
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  recipe.request                                                      [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: custom-event-demo                                                   [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "recipe_name": "\u756a\u8304\u7092\u86cb",                                [92m║[0m
+[92m║[0m   "ingredients": [                                                          [92m║[0m
+[92m║[0m     "\u9e21\u86cb",                                                         [92m║[0m
+[92m║[0m     "\u756a\u8304",                                                         [92m║[0m
+[92m║[0m     "\u76d0",                                                               [92m║[0m
+[92m║[0m     "\u6cb9",                                                               [92m║[0m
+[92m║[0m     "\u8471"                                                                [92m║[0m
+[92m║[0m   ]                                                                         [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  recipe.request                                                      [92m║[0m
+[92m║[0m Source: test_sender                                                         [92m║[0m
+[92m║[0m Target: custom-event-demo                                                   [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "recipe_name": "\u756a\u8304\u7092\u86cb",                                [92m║[0m
+[92m║[0m   "ingredients": [                                                          [92m║[0m
+[92m║[0m     "\u9e21\u86cb",                                                         [92m║[0m
+[92m║[0m     "\u756a\u8304",                                                         [92m║[0m
+[92m║[0m     "\u76d0",                                                               [92m║[0m
+[92m║[0m     "\u6cb9",                                                               [92m║[0m
+[92m║[0m     "\u8471"                                                                [92m║[0m
+[92m║[0m   ]                                                                         [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: recipe.request
+   Success: False
+   Message: Authentication failed: Invalid or missing secret
+🔧 AGENT_RUNNER: Calling react method for event recipe.request
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: thread.channel_message.post to channel:general
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  thread.channel_message.post                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: channel:general                                                     [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "action": "channel_message",                                              [92m║[0m
+[92m║[0m   "message_type": "channel_message",                                        [92m║[0m
+[92m║[0m   "channel": "general",                                                     [92m║[0m
+[92m║[0m   "content": {                                                              [92m║[0m
+[92m║[0m     "text": "\ud83c\udf73 Recipe for '\u756a\u8304\u7092\u86cb':\n\ud83d\udcdd **\u756a\u8304\u7092\u86cb \u5236\u4f5c\u65b9\u6cd5**\n        \n        **\u6240\u9700\u98df\u6750:**\n        - - \u9e21\u86cb\n- \u756a\u8304\n- \u76d0\n- \u6cb9\n- \u8471\n        \n        **\u5236\u4f5c\u6b65\u9aa4:**\n        1. \u51c6\u5907\u6240\u6709\u98df\u6750\u5e76\u6e05\u6d17\u5e72\u51c0\n2. \u5c0... [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  thread.channel_message.post                                         [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: channel:general                                                     [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "action": "channel_message",                                              [92m║[0m
+[92m║[0m   "message_type": "channel_message",                                        [92m║[0m
+[92m║[0m   "channel": "general",                                                     [92m║[0m
+[92m║[0m   "content": {                                                              [92m║[0m
+[92m║[0m     "text": "\ud83c\udf73 Recipe for '\u756a\u8304\u7092\u86cb':\n\ud83d\udcdd **\u756a\u8304\u7092\u86cb \u5236\u4f5c\u65b9\u6cd5**\n        \n        **\u6240\u9700\u98df\u6750:**\n        - - \u9e21\u86cb\n- \u756a\u8304\n- \u76d0\n- \u6cb9\n- \u8471\n        \n        **\u5236\u4f5c\u6b65\u9aa4:**\n        1. \u51c6\u5907\u6240\u6709\u98df\u6750\u5e76\u6e05\u6d17\u5e72\u51c0\n2. \u5c0... [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: thread.channel_message.post
+   Success: True
+   Message: Thread channel message event thread.channel_message.post processed successfully
+   Response data keys: ['event_name', 'event_id']
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: recipe.response to test_sender
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  recipe.response                                                     [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: test_sender                                                         [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "recipe_name": "\u756a\u8304\u7092\u86cb",                                [92m║[0m
+[92m║[0m   "ingredients": [                                                          [92m║[0m
+[92m║[0m     "\u9e21\u86cb",                                                         [92m║[0m
+[92m║[0m     "\u756a\u8304",                                                         [92m║[0m
+[92m║[0m     "\u76d0",                                                               [92m║[0m
+[92m║[0m     "\u6cb9",                                                               [92m║[0m
+[92m║[0m     "\u8471"                                                                [92m║[0m
+[92m║[0m   ],                                                                        [92m║[0m
+[92m║[0m   "recipe_details": "\ud83d\udcdd **\u756a\u8304\u7092\u86cb \u5236\u4f5c\u65b9\u6cd5**\n        \n        **\u6240\u9700\u98df\u6750:**\n        - - \u9e21\u86cb\n- \u756a\u8304\n- \u76d0\n- \u6cb9\n- \u8471\n        \n        **\u5236\u4f5c\u6b65\u9aa4:**\n        1. \u51c6\u5907\u6240\u6709\u98df\u6750\u5e76\u6e05\u6d17\u5e72\u51c0\n2. \u5c06 ... [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT (GRPC)[0m                                                      [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  recipe.response                                                     [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: test_sender                                                         [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "recipe_name": "\u756a\u8304\u7092\u86cb",                                [92m║[0m
+[92m║[0m   "ingredients": [                                                          [92m║[0m
+[92m║[0m     "\u9e21\u86cb",                                                         [92m║[0m
+[92m║[0m     "\u756a\u8304",                                                         [92m║[0m
+[92m║[0m     "\u76d0",                                                               [92m║[0m
+[92m║[0m     "\u6cb9",                                                               [92m║[0m
+[92m║[0m     "\u8471"                                                                [92m║[0m
+[92m║[0m   ],                                                                        [92m║[0m
+[STDERR] INFO:openagents.core.client:📥 RECEIVED EVENT: thread.direct_message.notification | Source: admin | Target: agent:custom-event-demo
+[STDERR] INFO:openagents.agents.worker_agent:🔧 WORKER_AGENT: Calling on_direct with source=admin
+[STDERR] INFO:__main__:Received direct message from admin: Hello
+[STDERR] D:\Project\grandma_cook_agent\agents\custom_event_demo.py:65: RuntimeWarning: coroutine 'WorkerAgent.send_direct' was never awaited
+[STDERR]   self.send_direct(context.source_id, response_text)
+[STDERR] RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+[STDERR] INFO:__main__:Received direct message notification from admin: Hello
+[STDERR] D:\Project\grandma_cook_agent\agents\custom_event_demo.py:80: RuntimeWarning: coroutine 'WorkerAgent.send_direct' was never awaited
+[STDERR]   self.send_direct(context.source_id, response_text)
+[STDERR] RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+[STDERR] INFO:openagents.core.client:📥 RECEIVED EVENT: thread.channel_message.notification | Source: admin | Target: custom-event-demo
+
+[2026-01-08 11:05:50] Stopping agent 'custom-event-demo'
+[92m║[0m   "recipe_details": "\ud83d\udcdd **\u756a\u8304\u7092\u86cb \u5236\u4f5c\u65b9\u6cd5**\n        \n        **\u6240\u9700\u98df\u6750:**\n        - - \u9e21\u86cb\n- \u756a\u8304\n- \u76d0\n- \u6cb9\n- \u8471\n        \n        **\u5236\u4f5c\u6b65\u9aa4:**\n        1. \u51c6\u5907\u6240\u6709\u98df\u6750\u5e76\u6e05\u6d17\u5e72\u51c0\n2. \u5c06 ... [92m║[0m[2026-01-08 11:05:50] Agent stopped
+============================================================
+
+
+============================================================
+[2026-01-08 11:05:51] Starting agent 'custom-event-demo'
+============================================================
+
+[STDERR] INFO:openagents.utils.mod_loaders:Successfully loaded mod adapter: openagents.mods.workspace.messaging
+[STDERR] INFO:openagents.utils.mod_loaders:Instantiated adapter for openagents.mods.workspace.messaging (no args)
+[STDERR] INFO:openagents.mods.workspace.messaging.adapter:Initializing Thread Messaging protocol for agent custom-event-demo with file storage at C:\Users\PC\AppData\Local\Temp\openagents_agent_custom-event-demo_threads_sqw1ndu7
+[STDERR] INFO:openagents.core.client:Registered mod adapter ThreadMessagingAgentAdapter with agent custom-event-demo
+[STDERR] INFO:openagents.agents.runner:Updated available tools for agent custom-event-demo: ['send_direct_message', 'send_channel_message', 'reply_channel_message', 'list_channels', 'retrieve_channel_messages', 'retrieve_direct_messages', 'react_to_message']
+[STDERR] INFO:openagents.agents.worker_agent:WorkerAgent 'custom-event-demo' collected 10 event handlers for patterns: ['thread.channel_message.notification', 'thread.reply.notification', 'thread.direct_message.notification', 'thread.file.upload_response', 'agent.message', 'thread.reaction.notification', 'custom.hello_world', 'demo.text.process', 'recipe.request', 'thread.direct_message.notification']
+[STDERR] INFO:openagents.agents.worker_agent:Initialized WorkerAgent 'custom-event-demo' with ID: custom-event-demo
+[STDERR] INFO:__main__:Initialized Custom Event Demo Agent with ID: custom-event-demo
+[STDERR] INFO:openagents.core.client:✅ Successfully retrieved health check from http://localhost:8700/api/health
+[STDERR] INFO:openagents.core.client:Detected network: GrandmaCookNetwork (grandma-cook-network-1)
+[STDERR] INFO:openagents.core.client:Transport: grpc, Host: localhost, Port: 8600
+[STDERR] INFO:openagents.core.client:Creating gRPC connector for agent custom-event-demo
+[STDERR] INFO:openagents.core.connectors.grpc_connector:Connecting to gRPC server at localhost:8600
+[STDERR] INFO:openagents.core.connectors.grpc_connector:Connected to gRPC network successfully
+[STDERR] INFO:openagents.core.client:🔧 Starting message polling for  agent custom-event-demo
+[STDERR] INFO:openagents.core.client:🔧 CLIENT: Starting message polling for agent custom-event-demo
+[STDERR] INFO:openagents.agents.runner:Supported mod: openagents.mods.workspace.forum (v1.0.0)
+[STDERR] INFO:openagents.agents.runner:Supported mod: openagents.mods.workspace.messaging (v1.0.0)
+[STDERR] INFO:openagents.agents.runner:Supported mod: openagents.mods.workspace.default (v1.0.0)
+[STDERR] INFO:openagents.agents.runner:Supported mod: openagents.mods.workspace.shared_artifact (v1.0.0)
+[STDERR] INFO:openagents.agents.worker_agent:Setting up WorkerAgent 'custom-event-demo'
+[STDERR] INFO:openagents.agents.worker_agent:Found thread messaging adapter with key: openagents.mods.workspace.messaging
+[STDERR] INFO:openagents.agents.worker_agent:Thread messaging events will be handled through the event system
+[STDERR] INFO:__main__:🤖 Custom Event Demo Agent 'custom-event-demo' starting up...
+[STDERR] ERROR:openagents.core.workspace:Failed to list channels: 'AgentClient' object has no attribute 'wait_mod_message'
+[STDERR] INFO:__main__:📺 Available channels: ['#general', '#dev', '#support']
+[STDERR] INFO:__main__:✅ Custom Event Demo Agent startup complete
+[STDERR] INFO:openagents.agents.worker_agent:WorkerAgent 'custom-event-demo' setup complete
+[STDERR] INFO:openagents.core.client:📥 RECEIVED EVENT: thread.direct_message.notification | Source: admin | Target: agent:custom-event-demo
+[STDERR] INFO:openagents.agents.worker_agent:🔧 WORKER_AGENT: Calling on_direct with source=admin
+[STDERR] INFO:__main__:Received direct message from admin: Hello
+[STDERR] D:\Project\grandma_cook_agent\agents\custom_event_demo.py:65: RuntimeWarning: coroutine 'WorkerAgent.send_direct' was never awaited
+[STDERR]   self.send_direct(context.source_id, response_text)
+[STDERR] RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+[STDERR] INFO:__main__:Received direct message notification from admin: Hello
+[STDERR] D:\Project\grandma_cook_agent\agents\custom_event_demo.py:80: RuntimeWarning: coroutine 'WorkerAgent.send_direct' was never awaited
+[STDERR]   self.send_direct(context.source_id, response_text)
+[STDERR] RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+[STDERR] INFO:openagents.core.client:📥 RECEIVED EVENT: thread.direct_message.notification | Source: admin | Target: agent:custom-event-demo
+[STDERR] INFO:openagents.agents.worker_agent:🔧 WORKER_AGENT: Calling on_direct with source=admin
+[STDERR] INFO:__main__:Received direct message from admin: hello
+[STDERR] INFO:__main__:Received direct message notification from admin: hello
+[STDERR] INFO:openagents.agents.worker_agent:Tearing down WorkerAgent 'custom-event-demo'
+[STDERR] INFO:__main__:🛑 Custom Event Demo Agent shutting down...
+[STDERR] INFO:__main__:✅ Custom Event Demo Agent shutdown complete
+[STDERR] INFO:openagents.utils.mcp_connector:Cleaning up MCP clients
+[STDERR] INFO:openagents.core.connectors.grpc_connector:Agent custom-event-demo disconnected from gRPC network
+[STDERR] Traceback (most recent call last):
+[STDERR]   File "D:\Users\PC\anaconda3\envs\openagents\Lib\asyncio\runners.py", line 118, in run
+[STDERR]     return self._loop.run_until_complete(task)
+[STDERR]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[STDERR]   File "D:\Users\PC\anaconda3\envs\openagents\Lib\asyncio\base_events.py", line 691, in run_until_complete
+[STDERR]     return future.result()
+[STDERR]            ^^^^^^^^^^^^^^^
+[STDERR]   File "D:\Project\grandma_cook_agent\agents\custom_event_demo.py", line 255, in main
+[STDERR]     await asyncio.sleep(1)
+[STDERR]   File "D:\Users\PC\anaconda3\envs\openagents\Lib\asyncio\tasks.py", line 665, in sleep
+[STDERR]     return await future
+[STDERR]            ^^^^^^^^^^^^
+[STDERR] asyncio.exceptions.CancelledError
+[STDERR] 
+[STDERR] During handling of the above exception, another exception occurred:
+[STDERR] 
+[STDERR] Traceback (most recent call last):
+[STDERR]   File "D:\Project\grandma_cook_agent\agents\custom_event_demo.py", line 271, in <module>
+[STDERR]     asyncio.run(main())
+[STDERR]   File "D:\Users\PC\anaconda3\envs\openagents\Lib\asyncio\runners.py", line 195, in run
+[STDERR]     return runner.run(main)
+[STDERR]            ^^^^^^^^^^^^^^^^
+[STDERR]   File "D:\Users\PC\anaconda3\envs\openagents\Lib\asyncio\runners.py", line 123, in run
+[STDERR]     raise KeyboardInterrupt()
+[STDERR] KeyboardInterrupt
+🚀 Starting Custom Event Demo Agent...
+============================================================
+This agent demonstrates custom event handling with @on_event
+It handles 'custom.hello_world' and 'demo.text.process' events
+------------------------------------------------------------
+🔌 Connecting to network...
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: system.list_mods to system:system
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  system.list_mods                                                    [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: system:system                                                       [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "agent_id": "custom-event-demo"                                           [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: system.list_mods
+   Success: True
+   Message: Mod list retrieved successfully
+   Response data keys: ['type', 'command', 'mods']
+✅ Connected successfully!
+🤖 Custom Event Demo Agent is now active...
+📋 Press Ctrl+C to stop the agent
+
+[96m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[96m║[0m [1m📥 RECEIVED EVENT[0m                                                            [96m║[0m
+[96m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[96m║[0m Event:  thread.direct_message.notification                                  [96m║[0m
+[96m║[0m Source: admin                                                               [96m║[0m
+[96m║[0m Target: agent:custom-event-demo                                             [96m║[0m
+[96m║[0m ──────────────────────────────────────────────────────────────────────────── [96m║[0m
+[96m║[0m {                                                                           [96m║[0m
+[96m║[0m   "target_agent_id": "custom-event-demo",                                   [96m║[0m
+[96m║[0m   "content": {                                                              [96m║[0m
+[96m║[0m     "text": "Hello"                                                         [96m║[0m
+[96m║[0m   },                                                                        [96m║[0m
+[96m║[0m   "message_type": "direct_message",                                         [96m║[0m
+[96m║[0m   "sender_id": "admin"                                                      [96m║[0m
+[96m║[0m }                                                                           [96m║[0m
+[96m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+🔧 AGENT_RUNNER: Calling react method for event thread.direct_message.notification
+✅ AGENT RESPONSE COMPLETED: 1ac977d5
+   Processing time: 0.01s
+   Message marked as processed
+
+[96m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[96m║[0m [1m📥 RECEIVED EVENT[0m                                                            [96m║[0m
+[96m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[96m║[0m Event:  thread.direct_message.notification                                  [96m║[0m
+[96m║[0m Source: admin                                                               [96m║[0m
+[96m║[0m Target: agent:custom-event-demo                                             [96m║[0m
+[96m║[0m ──────────────────────────────────────────────────────────────────────────── [96m║[0m
+[96m║[0m {                                                                           [96m║[0m
+[96m║[0m   "target_agent_id": "custom-event-demo",                                   [96m║[0m
+[96m║[0m   "content": {                                                              [96m║[0m
+[96m║[0m     "text": "hello"                                                         [96m║[0m
+[96m║[0m   },                                                                        [96m║[0m
+[96m║[0m   "message_type": "direct_message",                                         [96m║[0m
+[96m║[0m   "sender_id": "admin"                                                      [96m║[0m
+[96m║[0m }                                                                           [96m║[0m
+[96m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+🔧 AGENT_RUNNER: Calling react method for event thread.direct_message.notification
+✅ AGENT RESPONSE COMPLETED: 0c6b6a05
+   Processing time: 0.00s
+   Message marked as processed
+👋 Custom Event Demo Agent stopped
+
+[2026-01-08 11:08:37] Stopping agent 'custom-event-demo'
+[2026-01-08 11:08:37] Agent stopped
+============================================================
+
+
+============================================================
+[2026-01-08 11:09:14] Starting agent 'custom-event-demo'
+============================================================
+
+[STDERR] INFO:openagents.utils.mod_loaders:Successfully loaded mod adapter: openagents.mods.workspace.messaging
+[STDERR] INFO:openagents.utils.mod_loaders:Instantiated adapter for openagents.mods.workspace.messaging (no args)
+[STDERR] INFO:openagents.mods.workspace.messaging.adapter:Initializing Thread Messaging protocol for agent custom-event-demo with file storage at C:\Users\PC\AppData\Local\Temp\openagents_agent_custom-event-demo_threads_vxlr8e5h
+[STDERR] INFO:openagents.core.client:Registered mod adapter ThreadMessagingAgentAdapter with agent custom-event-demo
+[STDERR] INFO:openagents.agents.runner:Updated available tools for agent custom-event-demo: ['send_direct_message', 'send_channel_message', 'reply_channel_message', 'list_channels', 'retrieve_channel_messages', 'retrieve_direct_messages', 'react_to_message']
+[STDERR] INFO:openagents.agents.worker_agent:WorkerAgent 'custom-event-demo' collected 10 event handlers for patterns: ['thread.channel_message.notification', 'thread.reply.notification', 'thread.direct_message.notification', 'thread.file.upload_response', 'agent.message', 'thread.reaction.notification', 'custom.hello_world', 'demo.text.process', 'recipe.request', 'thread.direct_message.notification']
+[STDERR] INFO:openagents.agents.worker_agent:Initialized WorkerAgent 'custom-event-demo' with ID: custom-event-demo
+[STDERR] INFO:__main__:Initialized Custom Event Demo Agent with ID: custom-event-demo
+[STDERR] INFO:openagents.core.client:✅ Successfully retrieved health check from http://localhost:8700/api/health
+[STDERR] INFO:openagents.core.client:Detected network: GrandmaCookNetwork (grandma-cook-network-1)
+[STDERR] INFO:openagents.core.client:Transport: grpc, Host: localhost, Port: 8600
+[STDERR] INFO:openagents.core.client:Creating gRPC connector for agent custom-event-demo
+[STDERR] INFO:openagents.core.connectors.grpc_connector:Connecting to gRPC server at localhost:8600
+[STDERR] INFO:openagents.core.connectors.grpc_connector:Connected to gRPC network successfully
+[STDERR] INFO:openagents.core.client:🔧 Starting message polling for  agent custom-event-demo
+[STDERR] INFO:openagents.core.client:🔧 CLIENT: Starting message polling for agent custom-event-demo
+[STDERR] INFO:openagents.agents.runner:Supported mod: openagents.mods.workspace.forum (v1.0.0)
+[STDERR] INFO:openagents.agents.runner:Supported mod: openagents.mods.workspace.messaging (v1.0.0)
+[STDERR] INFO:openagents.agents.runner:Supported mod: openagents.mods.workspace.default (v1.0.0)
+[STDERR] INFO:openagents.agents.runner:Supported mod: openagents.mods.workspace.shared_artifact (v1.0.0)
+[STDERR] INFO:openagents.agents.worker_agent:Setting up WorkerAgent 'custom-event-demo'
+[STDERR] INFO:openagents.agents.worker_agent:Found thread messaging adapter with key: openagents.mods.workspace.messaging
+[STDERR] INFO:openagents.agents.worker_agent:Thread messaging events will be handled through the event system
+[STDERR] INFO:__main__:🤖 Custom Event Demo Agent 'custom-event-demo' starting up...
+[STDERR] ERROR:openagents.core.workspace:Failed to list channels: 'AgentClient' object has no attribute 'wait_mod_message'
+[STDERR] INFO:__main__:📺 Available channels: ['#general', '#dev', '#support']
+[STDERR] INFO:__main__:✅ Custom Event Demo Agent startup complete
+[STDERR] INFO:openagents.agents.worker_agent:WorkerAgent 'custom-event-demo' setup complete
+[STDERR] INFO:openagents.core.client:📥 RECEIVED EVENT: thread.direct_message.notification | Source: admin | Target: agent:custom-event-demo
+[STDERR] INFO:openagents.agents.worker_agent:🔧 WORKER_AGENT: Calling on_direct with source=admin
+[STDERR] INFO:__main__:Received direct message from admin: 大写hello
+[STDERR] D:\Project\grandma_cook_agent\agents\custom_event_demo.py:65: RuntimeWarning: coroutine 'WorkerAgent.send_direct' was never awaited
+[STDERR]   self.send_direct(context.source_id, response_text)
+[STDERR] RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+[STDERR] INFO:__main__:Received direct message notification from admin: 大写hello
+[STDERR] D:\Project\grandma_cook_agent\agents\custom_event_demo.py:80: RuntimeWarning: coroutine 'WorkerAgent.send_direct' was never awaited
+[STDERR]   self.send_direct(context.source_id, response_text)
+[STDERR] RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+[STDERR] INFO:openagents.core.client:📥 RECEIVED EVENT: thread.channel_message.notification | Source: admin | Target: custom-event-demo
+🚀 Starting Custom Event Demo Agent...
+============================================================
+This agent demonstrates custom event handling with @on_event
+It handles 'custom.hello_world' and 'demo.text.process' events
+------------------------------------------------------------
+🔌 Connecting to network...
+🔄 AgentClient.send_event called for agent custom-event-demo
+   Event: system.list_mods to system:system
+   Available mod adapters: ['openagents.mods.workspace.messaging']
+   Connector: GRPCNetworkConnector(agent_id=custom-event-demo, host=localhost, port=8600, connected=True)
+   Connector is_connected: True
+   Processing through openagents.mods.workspace.messaging adapter...
+   Result from openagents.mods.workspace.messaging: ✅ event
+
+[92m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[92m║[0m [1m📤 SENDING EVENT[0m                                                             [92m║[0m
+[92m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[92m║[0m Event:  system.list_mods                                                    [92m║[0m
+[92m║[0m Source: custom-event-demo                                                   [92m║[0m
+[92m║[0m Target: system:system                                                       [92m║[0m
+[92m║[0m ──────────────────────────────────────────────────────────────────────────── [92m║[0m
+[92m║[0m {                                                                           [92m║[0m
+[92m║[0m   "agent_id": "custom-event-demo"                                           [92m║[0m
+[92m║[0m }                                                                           [92m║[0m
+[92m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+✅ EVENT SENT: system.list_mods
+   Success: True
+   Message: Mod list retrieved successfully
+   Response data keys: ['type', 'command', 'mods']
+✅ Connected successfully!
+🤖 Custom Event Demo Agent is now active...
+📋 Press Ctrl+C to stop the agent
+
+[96m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[96m║[0m [1m📥 RECEIVED EVENT[0m                                                            [96m║[0m
+[96m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[96m║[0m Event:  thread.direct_message.notification                                  [96m║[0m
+[96m║[0m Source: admin                                                               [96m║[0m
+[96m║[0m Target: agent:custom-event-demo                                             [96m║[0m
+[96m║[0m ──────────────────────────────────────────────────────────────────────────── [96m║[0m
+[96m║[0m {                                                                           [96m║[0m
+[96m║[0m   "target_agent_id": "custom-event-demo",                                   [96m║[0m
+[96m║[0m   "content": {                                                              [96m║[0m
+[96m║[0m     "text": "\u5927\u5199hello"                                             [96m║[0m
+[96m║[0m   },                                                                        [96m║[0m
+[96m║[0m   "message_type": "direct_message",                                         [96m║[0m
+[96m║[0m   "sender_id": "admin"                                                      [96m║[0m
+[96m║[0m }                                                                           [96m║[0m
+[96m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+🔧 AGENT_RUNNER: Calling react method for event thread.direct_message.notification
+✅ AGENT RESPONSE COMPLETED: 4c9ce725
+   Processing time: 0.00s
+   Message marked as processed
+
+[96m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[96m║[0m [1m📥 RECEIVED EVENT[0m                                                            [96m║[0m
+[96m╠══════════════════════════════════════════════════════════════════════════════╣[0m
+[96m║[0m Event:  thread.channel_message.notification                                 [96m║[0m
+[96m║[0m Source: admin                                                               [96m║[0m
+[96m║[0m Target: custom-event-demo                                                   [96m║[0m
+[96m║[0m ──────────────────────────────────────────────────────────────────────────── [96m║[0m
+[96m║[0m {                                                                           [96m║[0m
+[96m║[0m   "channel": "\u751f\u6210\u83dc\u8c31\u5361\u7247",                        [96m║[0m
+[96m║[0m   "content": {                                                              [96m║[0m
+[96m║[0m     "text": "\u5927\u5199hello"                                             [96m║[0m
+[96m║[0m   },                                                                        [96m║[0m
+[96m║[0m   "message_type": "channel_message",                                        [96m║[0m
+[96m║[0m   "original_event_id": "admin_1767841873024_l4mxkrwc8"                      [96m║[0m
+[96m║[0m }                                                                           [96m║[0m
+[96m╚══════════════════════════════════════════════════════════════════════════════╝[0m
+
+🔧 AGENT_RUNNER: Calling react method for event thread.channel_message.notification
+✅ AGENT RESPONSE COMPLETED: 1963ccb2
+   Processing time: 0.00s
+   Message marked as processed
+
+[96m╔══════════════════════════════════════════════════════════════════════════════╗[0m
+[96m║[0m [1m📥 RECEIVED EVENT[0m                                                            [96m║[0m
+[STDERR] INFO:openagents.core.client:📥 RECEIVED EVENT: thread.direct_message.notification | Source: admin | Target: agent:custom-event-demo
+[STDERR] INFO:openagents.agents.worker_agent:🔧 WORKER_AGENT: Calling on_direct with source=admin
+[STDERR] INFO:__main__:Received direct message from admin: hello world
+[STDERR] INFO:__main__:Received direct message notification from admin: hello world
+[STDERR] INFO:openagents.core.client:📥 RECEIVED EVENT: thread.direct_message.notification | Source: admin | Target: agent:custom-event-demo
+[STDERR] INFO:openagents.agents.worker_agent:🔧 WORKER_AGENT: Calling on_direct with source=admin
+[STDERR] INFO:__main__:Received direct message from admin: 你好呀
+[STDERR] INFO:__main__:Received direct message notification from admin: 你好呀
+[STDERR] INFO:openagents.agents.worker_agent:Tearing down WorkerAgent 'custom-event-demo'
+[STDERR] INFO:__main__:🛑 Custom Event Demo Agent shutting down...
+[STDERR] INFO:__main__:✅ Custom Event Demo Agent shutdown complete
+[STDERR] INFO:openagents.utils.mcp_connector:Cleaning up MCP clients

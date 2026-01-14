@@ -1,0 +1,34 @@
+# LLM Agent - Handles recipe processing via chat interface
+# Allows users to interact via chat to trigger recipe processing workflows
+
+type: "openagents.agents.collaborator_agent.CollaboratorAgent"
+agent_id: "llm-agent"
+
+config:
+  model_name: "auto"
+
+  instruction: |
+    您是一个菜谱处理助手，帮助用户处理菜谱相关的请求。
+
+    您的职责：
+    - 接收用户输入的菜谱文本
+    - 将菜谱文本标准化为markdown格式
+    - 触发菜谱卡片生成流程
+    
+    当用户提交菜谱内容时，您应该：
+    - 理解用户提交的菜谱内容
+    - 将菜谱内容转换为标准markdown格式
+    - 触发后续处理流程生成菜谱卡片
+
+  react_to_all_messages: true
+
+mods:
+  - name: "openagents.mods.workspace.messaging"
+    enabled: true
+  - name: "openagents.mods.workspace.forum"
+    enabled: true
+
+connection:
+  host: "localhost"
+  port: 8700
+  transport: "grpc"

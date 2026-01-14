@@ -1,0 +1,9 @@
+{
+  "env_vars": {
+    "DEFAULT_LLM_PROVIDER": "openai-compatible",
+    "DEFAULT_LLM_MODEL_NAME": "Qwen/Qwen3-8B",
+    "DEFAULT_LLM_API_KEY": "sk-oranljotvegkepgjnefekoxohtoouonmtqoldbqnbbrxfmrp",
+    "DEFAULT_LLM_BASE_URL": "https://api.siliconflow.cn/v1"
+  },
+  "updated_at": "2026-01-07T15:18:35.334081"
+}

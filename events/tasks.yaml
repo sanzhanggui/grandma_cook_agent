@@ -1,0 +1,15 @@
+asyncapi: '3.0.0'
+info:
+  title: Task Coordination Events
+  version: '1.0.0'
+ 
+operations:
+  delegateTask:
+    action: send
+    channel:
+      $ref: '#/channels/task~1delegate'
+    summary: Delegate a task to a specific agent
+    x-agent-tool:
+      enabled: true
+      name: delegate_task
+      description: "Delegate a task to a worker agent"
